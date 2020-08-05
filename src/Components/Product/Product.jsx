@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './Product.module.scss';
 import { useStateValue } from '../../StateProvider';
+import Button from '../Button/Button';
 
 const Product = ({ id, title, image, price, rating }) => {
   
@@ -34,7 +35,7 @@ const Product = ({ id, title, image, price, rating }) => {
         </div>
       </div>
       <img src={image} alt=""/>
-      <button onClick={addToBasket}>Add to basket</button>
+      <Button className='btn btn-primary' onClick={addToBasket}>Add to basket</Button>
     </div>
   );
 }

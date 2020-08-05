@@ -1,8 +1,10 @@
 import React from 'react';
+
 import s from './Subtotal.module.scss';
 import CurrencyFormat from 'react-currency-format';
 import { useStateValue } from '../../StateProvider';
 import { getBasketTotal } from '../../reducer';
+import Button from '../Button/Button';
 
 const Subtotal = () => {
   
@@ -27,7 +29,7 @@ const Subtotal = () => {
         thousandSeparator={true}
         prefix={'$'}
       />
-      <button>Proceed to Checkout</button>
+      <Button className='btn btn-primary'>Proceed to Checkout</Button>
     </div>
   );
 }

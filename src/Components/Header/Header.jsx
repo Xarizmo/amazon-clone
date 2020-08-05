@@ -1,9 +1,12 @@
 import React from 'react';
+
 import s from './Header.module.scss';
+
 import { Link } from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import { useStateValue } from '../../StateProvider';
+import amazonLogo from '../../assets/images/amazon_logo.png';
 
 const Header = () => {
   const [{ basket }] = useStateValue();
@@ -13,7 +16,7 @@ const Header = () => {
       <Link to='/'>
         <img
           className={s.header__logo}
-          src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'
+          src={amazonLogo}
           alt="Amazon logo"/>
       </Link>
       <div className={s.header__search}>

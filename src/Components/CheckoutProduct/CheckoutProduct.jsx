@@ -2,6 +2,7 @@ import React from 'react';
 
 import s from './CheckoutProduct.module.scss';
 import { useStateValue } from '../../StateProvider';
+import Button from '../Button/Button';
 
 const CheckoutProduct = ({ id, title, image, price, rating }) => {
   
@@ -28,7 +29,7 @@ const CheckoutProduct = ({ id, title, image, price, rating }) => {
             Array(rating).fill().map((_) => <p>&#11088;</p>)
           }
         </div>
-        <button onClick={() => removeFromBasket(id)}>Remove from basket</button>
+        <Button onClick={() => removeFromBasket(id)}>Remove from basket</Button>
       </div>
     </div>
   );
