@@ -1,11 +1,5 @@
 export const initState = {
-  basket: [{
-    id: '12345',
-    title: 'Apple iMac Pro 27" 3.7GHz 6-Core Processor with Turbo Boost up to 4.6GHz 2TB Storage Retina 5K Display',
-    price: 4999.99,
-    rating: 5,
-    image: 'https://main-cdn.goods.ru/big1/hlr-system/16348641128/600000755357b0.jpeg',
-  }],
+  basket: [],
   user: null,
 };
 
@@ -14,6 +8,11 @@ export const getBasketTotal = (basket) => basket?.reduce((amount, item) => item.
 const reducer = (state, action) => {
   console.log(action);
   switch (action.type) {
+    case 'SET_USER':
+      return {
+        ...state,
+        user: action.user
+      }
     case 'ADD_TO_BASKET':
       return {
         ...state,
